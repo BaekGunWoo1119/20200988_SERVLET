@@ -13,8 +13,8 @@ public class Product implements Serializable {
 	private String category; 	//분류
 	private long unitsInStock; //재고수 
 	private String condition; 	//신상품 or 중고품 or 재생품
-	
-public Product() {
+
+    public Product() {
 		super();
 	}
 
@@ -30,9 +30,10 @@ public Product() {
 
 	public String getPname() {
 		return pname;
-    }
+	}
     
-    public void setPname(String pname) {
+    
+	public void setPname(String pname) {
 		this.pname = pname;
 	}
 
@@ -60,8 +61,7 @@ public Product() {
 		return manufacturer;
 	}
 
-
-	public void setManufacturer(String manufacturer) {
+    public void setManufacturer(String manufacturer) {
 		this.manufacturer = manufacturer;
 	}
 
@@ -89,4 +89,5 @@ public Product() {
 		this.condition = condition;
 	}
 }
+
 
