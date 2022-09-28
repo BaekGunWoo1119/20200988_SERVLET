@@ -15,6 +15,8 @@
                     }
                     String CT = hour + ":" + minute + ":" + second + " " + am_pm;
                     out.println("현재 접속  시각: " + CT + "\n");
-        %>
+        %><br>
+            현재 페이지 버퍼 용량 : <%= out.getBufferSize() %> <br>
+ 			남은 페이지 버퍼 용량 : <%= out.getRemaining() %>
         </p>
 	</footer>
