@@ -27,7 +27,7 @@
 			%>
 			<div class="col-md-4">
                 <div class="card bg-dark text-white">
-                        <img src="../image/product/<%=product.getProductId()%>.jpg" class="card-img" alt="...">
+                        <img src="../image/product/<%=product.getFilename()%>" class="card-img" alt="...">
                     <div class="card-img-overlay">
                         <h5 class="card-title"><%=product.getPname()%></h5>
                         <p class="card-text">지금 구매 후 플레이</p>
@@ -45,7 +45,7 @@
 		<hr>
 </div>
 	<div class="card bg-dark text-white">
-    	<img src="image/top.jpg" class="card-img" alt="...">
+    	<img src="../image/top.jpg" class="card-img" alt="...">
     	<div class="card-img-overlay">
     		<h5 class="card-title">알비온 온라인</h5>
     		<p class="card-text">출처 : 구글 플레이 스토어</p>

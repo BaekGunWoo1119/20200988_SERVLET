@@ -2,6 +2,7 @@
 <%@ page import="dto.Product"%>
 <%@ page import="java.util.Date"%>
 <%@ page import="example.*" %>
+<%@ page import="dao.ProductRepository"%>
 <%@ page errorPage = "exception/product_not_found.jsp" %>
 <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
 <html>
@@ -22,7 +23,8 @@
 	</div>
 	<%
 		String id = request.getParameter("id");
-		Product product = productDAO.getProductById(id);
+    	ProductRepository dao = ProductRepository.getInstance();
+		Product product = dao.getProductById(id);
 	%>
 	<div class="container">
 		<div class="row">
@@ -35,7 +37,7 @@
 				<p><b>재고 수</b> : <%=product.getUnitsInStock()%>
 				<h4><%=product.getUnitPrice()%>원</h4>
                 <div class="card bg-dark text-white">
-                    <img src="image/product/<%=product.getProductId()%>.jpg" class="card-img" alt="...">
+                    <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="...">
                     <div class="card-img-overlay">
                     <h5 class="card-title"><%=product.getPname()%></h5>
                     <p class="card-text">지금 구매 후 플레이</p>

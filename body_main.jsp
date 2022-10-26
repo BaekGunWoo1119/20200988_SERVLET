@@ -27,7 +27,7 @@
 			%>
 			<div class="col-md-4">
                 <div class="card bg-dark text-white">
-                        <img src="image/product/<%=product.getProductId()%>.jpg" class="card-img" alt="...">
+                        <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="...">
                     <div class="card-img-overlay">
                         <h5 class="card-title"><%=product.getPname()%></h5>
                         <p class="card-text">지금 구매 후 플레이</p>

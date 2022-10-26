@@ -19,6 +19,7 @@ public class ProductRepository {
             phone.setManufacturer("Rockstar");
             phone.setUnitsInStock(1000);
             phone.setCondition("New");
+            phone.setFilename("P1234.jpg");
 
             Product notebook = new Product("P1235", "TEKKEN 8", 70000);
             notebook.setDescription("i5-7500, ddr4 RAM 8G, GTX1060, 60G 이상의 저장공간");
@@ -26,6 +27,7 @@ public class ProductRepository {
             notebook.setManufacturer("Bandai Namco");
             notebook.setUnitsInStock(1000);
             notebook.setCondition("New");
+            notebook.setFilename("P1235.jpg");
 
             Product tablet = new Product("P1236", "OverWatch 2", 60000);
             tablet.setDescription("i5-3500, ddr3 RAM 8G, GTX960, 50G 이상의 저장공간");
@@ -33,6 +35,7 @@ public class ProductRepository {
             tablet.setManufacturer("Blizzard");
             tablet.setUnitsInStock(1000);
             tablet.setCondition("New");
+            tablet.setFilename("P1236.jpg");
 
             // 위와 같이 상품 초기화 하고 아래에 상품을 추가
 
