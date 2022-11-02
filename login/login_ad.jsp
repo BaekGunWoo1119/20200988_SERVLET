@@ -11,7 +11,7 @@
 	<jsp:include page="../top_menu.jsp" />
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3" id="admin_type">상품 등록 페이지 접근 - 로그인이 필요합니다.</h1>
+			<h1 class="display-3">관리자 전용 페이지 접근 - 로그인이 필요합니다.</h1>
 		</div>
 	</div>
 	<div class="container" align="center">
@@ -38,22 +38,6 @@
 		</form>
 	</div>
 </div>
-<script>
-    function setInner(){
-        const element = document.getElementById('admin_type');
-        element.innerText = '관리자 권한 페이지 접근 - 로그인이 필요합니다';
-        }
-    
-    var url1 = document.location.href;
-    var url2 = 'https://g-servlet-tqpex.run.goorm.io/admin/index_ad.jsp';
-        if (url1 == url2)
-        {
-        	setInner();
-        }
-    	else{
-            
-        }
-</script>
 </body>
 </html>
 <%	
