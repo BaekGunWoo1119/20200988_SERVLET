@@ -19,6 +19,11 @@
 
 	ArrayList<Product> cartList = (ArrayList<Product>) session.getAttribute("cartlist");
 	Product goodsQnt = new Product();
+	if (goodsQnt.getProductId() == null){
+        session.invalidate();
+        response.sendRedirect("product_cart.jsp");
+        return;
+    }
 	for (int i = 0; i < cartList.size(); i++) { // 상품리스트 하나씩 출력하기
 		goodsQnt = cartList.get(i);
 		if (goodsQnt.getProductId().equals(id)) {
