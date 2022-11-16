@@ -8,7 +8,7 @@
 <script>
 	window.open("popup/popup1.jsp", "popup", "width=365, height = 250, left = 0, top=0")
 </script>
-<script type ="text/javascript" src ="../js/validation.js"></script>
+<script type ="text/javascript" src ="../js/validation_1.js"></script>
 <title>상품 등록</title>
 </head>
 <body>
