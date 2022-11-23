@@ -43,14 +43,29 @@
         const element = document.getElementById('admin_type');
         element.innerText = '관리자 권한 페이지 접근 - 로그인이 필요합니다';
         }
+    function setInner2(){
+        const element = document.getElementById('admin_type');
+        element.innerText = '수정 페이지 접근 - 로그인이 필요합니다';
+        }
     
     var url1 = document.location.href;
-    var url2 = 'https://g-servlet-tqpex.run.goorm.io/admin/index_ad.jsp';
-        if (url1 == url2)
-        {
+    var url2 = 'https://jsp-main--fwpep.run.goorm.io/admin/index_ad.jsp';
+    var url3 = 'https://jsp-main--fwpep.run.goorm.io/admin/product_edit.jsp';
+    var url4 = 'https://jsp-main--fwpep.run.goorm.io/admin/product_edit.jsp?edit=update';
+    
+        if (url1 == url2){
         	setInner();
         }
-    	else{
+    
+    	else if (url1 == url3){
+            setInner2();
+        }
+        
+        else if (url1 == url4){
+            setInner2();
+        }
+    
+        else{
             
         }
 </script>
