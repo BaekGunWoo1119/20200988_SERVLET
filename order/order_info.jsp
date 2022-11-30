@@ -12,15 +12,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script type="text/javascript">
-	window.onload = function() {
-        let date = new Date(); //현재시간
-        console.log(minDate);
-		let today = date.toISOString().slice(0, 10);
-		let bir = document.getElementById("todaybirthday");
-		bir.value = today;
-	}
-</script>
 <title>배송 정보</title>
 </head>
 <body>
@@ -63,24 +54,31 @@
         <div class="form-group row">
            <label class="col-sm-2">우편번호</label>
              <div class="col-sm-3">
-                 <input name="zipCode" type="text" class="form-control" id="sample2_postcode" placeholder="우편번호">
-				 <input type="button" onclick="sample2_execDaumPostcode()" value="우편번호 찾기"><br>
-				 <script src="../js/mailNumber_1.js"></script>
-				 <div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;">
-                 	<img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
-                 </div>
+                 <script type="text/javascript">
+                    var openWin;
+
+                    function openChild()
+                    {
+                        // window.name = "부모창 이름"; 
+                        window.name = "orderInfo";
+                        // window.open("open할 window", "자식창 이름", "팝업창 옵션");
+                        openWin = window.open('order_address.jsp', '_blank', 'width=700px, height=500px' );    
+                    }
+                 </script>
+                 <input name="zipCode" type="text" class="form-control" id="postcode" placeholder="우편번호">
+				 <input type="button" onclick="openChild();" value="우편번호 찾기"><br>
              </div>
         </div>
        <div class="form-group row">
 		   <label class="col-sm-2">주소</label>
 	     	<div class="col-sm-5">
-				<input name="addressName1" type="text" id="sample2_address" placeholder="주소" class="form-control" />
+				<input name="addressName1" type="text" id="Address" placeholder="주소" class="form-control" />
 	     	</div>
 	   </div>
        <div class="form-group row">
 		   <label class="col-sm-2">상세주소</label>
 	     	<div class="col-sm-5">
-				<input name="addressName2" type="text" id="sample2_detailAddress" placeholder="상세주소" class="form-control" />
+				<input name="addressName2" type="text" id="DetailAddress" placeholder="상세주소" class="form-control" />
 	     	</div>
 	   </div>
 	   <div class="form-group row">

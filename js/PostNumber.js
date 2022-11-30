@@ -4,6 +4,7 @@
     function closeDaumPostcode() {
         // iframe을 넣은 element를 안보이게 한다.
         element_layer.style.display = 'none';
+        
     }
 
     function sample2_execDaumPostcode() {
@@ -49,11 +50,12 @@
                 document.getElementById('sample2_postcode').value = data.zonecode;
                 document.getElementById("sample2_address").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
-                document.getElementById("sample2_detailAddress").focus();
+                //document.getElementById("sample2_detailAddress").focus();
 
                 // iframe을 넣은 element를 안보이게 한다.
                 // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
-                element_layer.style.display = 'none';
+                //element_layer.style.display = 'none';
+                document.getElementById("adress_submit").click();
             },
             width : '100%',
             height : '100%',
@@ -61,10 +63,10 @@
         }).embed(element_layer);
 
         // iframe을 넣은 element를 보이게 한다.
-        element_layer.style.display = 'block';
+        //element_layer.style.display = 'block';
 
         // iframe을 넣은 element의 위치를 화면의 가운데로 이동시킨다.
-        initLayerPosition();
+        //initLayerPosition();
     }
 
     // 브라우저의 크기 변경에 따라 레이어를 가운데로 이동시키고자 하실때에는

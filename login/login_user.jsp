@@ -25,7 +25,7 @@
 					out.println("</div>");
 				}
 			%> 
-            <form class="form-signin" action="j_security_check" method="post">
+            <form class="form-signin" action="login_check.jsp" method="post">
 			<div class="form-group">
 				<label for="inputUserName" class="sr-only">User Name</label> 
 				<input type="text" class="form-control" placeholder="ID" name='j_username' required autofocus>
@@ -36,6 +36,7 @@
 			</div>
 			<button class="btn btn btn-lg btn-success btn-block" type="submit">로그인</button>
 		</form>
+        <button class="btn btn btn-lg btn-success btn-block" type="button" onclick="location.href='../member_join.jsp';">회원가입</button>
 	</div>
 </div>
 </body>

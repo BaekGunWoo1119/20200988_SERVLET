@@ -31,8 +31,10 @@
 				shipping_country = URLDecoder.decode((thisCookie.getValue()), "utf-8");
 			if (n.equals("Shipping_zipCode"))
 				shipping_zipCode = URLDecoder.decode((thisCookie.getValue()), "utf-8");
-			if (n.equals("Shipping_addressName"))
-				shipping_addressName = URLDecoder.decode((thisCookie.getValue()), "utf-8");
+			if (n.equals("Shipping_addressName1"))
+				shipping_addressName1 = URLDecoder.decode((thisCookie.getValue()), "utf-8");
+            if (n.equals("Shipping_addressName2"))
+				shipping_addressName2 = URLDecoder.decode((thisCookie.getValue()), "utf-8");
 		}
 	}
 %>
