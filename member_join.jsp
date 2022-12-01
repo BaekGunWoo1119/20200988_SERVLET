@@ -19,7 +19,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<form name="memebrJoin" action="member_join_prosess.jsp" class="form-horizontal" method="post" enctype ="multipart/form-data">
+		<form name="memebrJoin" action="member_join_process.jsp" class="form-horizontal" method="post">
 			<div class="form-group row">
 				<label class="col-sm-2">아이디</label>
 				<div class="col-sm-3">
@@ -55,6 +55,12 @@
                     </fieldset>
 				</div>
 			</div>
+            <div class="form-group row">
+                <label class="col-sm-2">생년월일</label>
+                <div class="col-sm-3">
+                    <input name="birth" id="birth" type="date" class="form-control" id="birth" />(yyyy/mm/dd)
+                </div>
+            </div>
 			<div class="form-group row">
 				<label class="col-sm-2">메일주소</label>
 				<div class="col-sm-3">
@@ -77,7 +83,7 @@
 			<div class="form-group row">
 				<div class="col-sm-offset-2 col-sm-10 ">
 					<input type="submit" class="btn btn-primary" value="회원가입" onclick ="CheckAddUserJoin()" >
-                    <a href="../login/login_user.jsp" class="btn btn-sm btn-success pull-right">로그인(이전페이지)</a>
+                    <a href="login/login_user.jsp" class="btn btn-sm btn-success pull-right">로그인(이전페이지)</a>
 				</div>
 			</div>
 		</form>

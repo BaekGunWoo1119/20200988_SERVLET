@@ -12,7 +12,7 @@ function CheckAddUserJoin() {
 			"[아이디 입력]\nID에는 영어와 숫자만을 포함해주세요!"))
 		return false;
     
-	if (UserId.value == null) {
+	if (UserId.value = null) {
 		alert("[아이디 입력]\n아이디를 입력하세요!");
 		UserId.select();
 		UserId.focus();
@@ -20,6 +20,13 @@ function CheckAddUserJoin() {
 	}
     
     // 유저닉네임 체크
+    if (UserName.value = null) {
+		alert("[닉네임 입력]\n닉네임을 입력하세요!");
+		UserId.select();
+		UserId.focus();
+		return false;
+	}
+    
 	if (UserName.value.length < 4 || UserName.value.length > 50) {
 		alert("[닉네임 입력]\n최소 4자에서 최대 50자까지 입력하세요");
 		UserName.select();
@@ -28,15 +35,28 @@ function CheckAddUserJoin() {
 	}
     
     //이메일 체크
-    if (Email.value == null) {
+    if (Email.value = null) {
 		alert("[이메일 입력]\n 이메일을 입력하세요!");
 		Email.select();
 		Email.focus();
 		return false;
 	}
     
+    //성별 체크
+    if (Gender.value = null) {
+		alert("[성별 입력]\n 성별을 선택하세요!");
+		Email.select();
+		Email.focus();
+		return false;
+	}
+    
     //비밀번호 체크
-	if(UserPw.value.length < 8 || UserPw.value.length > 20){
+    if (UserPw.value = null) {
+		alert("[비밀번호 입력]\n 비밀번호를 입력하세요!");
+		Email.select();
+		Email.focus();
+		return false;
+	 }else if(UserPw.value.length < 8 || UserPw.value.length > 20){
       alert("[비밀번호 입력]\n8자리 ~ 20자리 이내로 입력해주세요.");
       UserPw.select();
 	  UserPw.focus();
