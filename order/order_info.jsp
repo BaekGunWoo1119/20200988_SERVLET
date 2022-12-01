@@ -33,22 +33,18 @@
          <div class="form-group row">
          	<label class="col-sm-2">배송일</label>
         	<div class="col-sm-3">
-                <input name="shippingDate" type="date" min = "<%= strdate%>" class="form-control" id="todaybirthday" />(yyyy/mm/dd)
+                <input name="shippingDate" type="date" min = "<%= strdate%>" class="form-control" id="shippingDate" />(yyyy/mm/dd)
         	</div>
          </div>
          <div class="form-group row">
            <label class="col-sm-2">국가명</label>
              <div class="col-sm-3">
-                <fieldset>
-                    <input name="country" type="radio" id="KR"> 
-                    <label for="KR">한국</label>
-                    <input name="country" type="radio" id="US">
-                    <label for="US">미국</label>
-                    <input name="country" type="radio" id="CN">
-                    <label for="CN">중국</label>
-                    <input name="country" type="radio" id="JP">
-                    <label for="JP">일본</label>
-                </fieldset>
+                <select name="country">
+                    <option value="KR">한국</option>
+                    <option value="KR">미국</option>
+                    <option value="KR">중국</option>
+                    <option value="KR">일본</option>
+                </select>
              </div>
          </div>
         <div class="form-group row">

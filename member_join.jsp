@@ -8,7 +8,7 @@
 <script>
 	window.open("popup/popup1.jsp", "popup", "width=365, height = 250, left = 0, top=0")
 </script>
-<script type ="text/javascript" src ="js/validation_1.js"></script>
+<script type ="text/javascript" src ="js/MemBerJoin.js"></script>
 <title>회원 가입</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<form name="newProduct" action="product_add_process.jsp" class="form-horizontal" method="post" enctype ="multipart/form-data">
+		<form name="memebrJoin" action="member_join_prosess.jsp" class="form-horizontal" method="post" enctype ="multipart/form-data">
 			<div class="form-group row">
 				<label class="col-sm-2">아이디</label>
 				<div class="col-sm-3">
@@ -29,13 +29,13 @@
 			<div class="form-group row">
 				<label class="col-sm-2">패스워드</label>
 				<div class="col-sm-3">
-					<input type="text" name="Userpw" id="Userpw" class="form-control" >
+					<input type="password" name="Userpw" id="Userpw" class="form-control" >
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2">패스워드 재입력</label>
 				<div class="col-sm-3">
-					<input type="text" name="Userpw_re" id="Userpw_re" class="form-control" >
+					<input type="password" name="Userpw_re" id="Userpw_re" class="form-control" >
 				</div>
 			</div>
 			<div class="form-group row">
@@ -70,15 +70,13 @@
 			<div class="form-group row">
 				<label class="col-sm-2">주소</label>
 				<div class="col-sm-5">
-					<input type="radio" name="condition" value="New " > 신규 제품 
-					<input type="radio" name="condition" value="Old" > 중고 제품 
-					<input type="radio" name="condition" value="Refurbished" > 재생 제품
+					<input type="text" name="address" id="address" class="form-control" >
 				</div>
 			</div>
 
 			<div class="form-group row">
 				<div class="col-sm-offset-2 col-sm-10 ">
-					<input type="submit" class="btn btn-primary" value="등록" onclick ="CheckAddProduct()" >
+					<input type="submit" class="btn btn-primary" value="회원가입" onclick ="CheckAddUserJoin()" >
                     <a href="../login/login_user.jsp" class="btn btn-sm btn-success pull-right">로그인(이전페이지)</a>
 				</div>
 			</div>

@@ -13,7 +13,8 @@
 	String shipping_shippingDate = "";
 	String shipping_country = "";
 	String shipping_zipCode = "";
-	String shipping_addressName = "";
+	String shipping_addressName1 = "";
+    String shipping_addressName2 = "";
 	
 	Cookie[] cookies = request.getCookies(); // 쿠키 배열로부터 정보 얻기
 
@@ -62,7 +63,7 @@
 		<div class="col-4" align="left">
 			<strong>배송 주소</strong> <br> 성명 : <% out.println(shipping_name); %>	<br> 
 			우편번호 : <% out.println(shipping_zipCode);%><br> 
-			주소 : <% out.println(shipping_addressName);%>(<% out.println(shipping_country);%>) <br>
+			주소 : <% out.println(shipping_addressName1);%> <% out.println(shipping_addressName2);%> (<% out.println(shipping_country);%>) <br>
 		</div>
 		<div class="col-4" align="right">
 			<p>	<em>배송일: <% out.println(shipping_shippingDate);%></em>

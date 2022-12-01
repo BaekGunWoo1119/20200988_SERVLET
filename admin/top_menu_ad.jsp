@@ -15,7 +15,7 @@
     	</div>
     </div>
     <div>
-        <a class="navbar-brand" href="./index.jsp"><img src="image\logo_img.gif" class="img-fluid" alt="main_image"></a>
+        <a class="navbar-brand" href="../index.jsp"><img src="image\logo_img.gif" class="img-fluid" alt="main_image"></a>
     </div>
     
 	<div class="container">

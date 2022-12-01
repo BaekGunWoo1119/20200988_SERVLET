@@ -44,3 +44,4 @@
        <input type="button" style="display:none" id="adress_submit" value="주소 전달" onclick="setParentText()">
        <button type="submit" id="adress_submit" style="display:none"></button>
 </body>
+</html>

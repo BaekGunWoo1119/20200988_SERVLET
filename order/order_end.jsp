@@ -15,7 +15,8 @@
 		String shipping_shippingDate = "";
 		String shipping_country = "";
 		String shipping_zipCode = "";
-		String shipping_addressName = "";		
+		String shipping_addressName1 = "";	
+        String shipping_addressName2 = "";	
 
 		Cookie[] cookies = request.getCookies();
 
@@ -63,9 +64,11 @@
 			thisCookie.setMaxAge(0);
 		if (n.equals("Shipping_zipCode"))
 			thisCookie.setMaxAge(0);
-		if (n.equals("Shipping_addressName"))
+		if (n.equals("Shipping_addressName1"))
 			thisCookie.setMaxAge(0);
-		
+		if (n.equals("Shipping_addressName2"))
+			thisCookie.setMaxAge(0);
+        
 		response.addCookie(thisCookie);
 	}
 %>
