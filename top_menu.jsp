@@ -21,8 +21,18 @@
 	<div class="container">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="index.jsp">상품목록(기본 홈)</a>
-            <a class="navbar-brand" href="login/login_user.jsp">로그인</a>
-            <a class="navbar-brand" href="member_join.jsp">회원가입</a>
+            <% 
+                if(session.getAttribute("user_id") == null){
+                    %><a class="navbar-brand" href="login/login_user.jsp">로그인</a>
+                      <a class="navbar-brand" href="member_join.jsp">회원가입</a><%
+                }
+                
+                else {
+                 %><a class="navbar-brand" href=""><%=session.getAttribute("user_name")%>님</a>
+                   <a class="navbar-brand" href="login/logout.jsp">로그아웃</a><%
+            
+                }
+            %>
             <a class="navbar-brand" href="/BoardListAction.do?pageNum=1">게시판(고객센터)</a>
             <a class="navbar-brand" href="admin/index_ad.jsp">관리자모드</a>
 		</div>

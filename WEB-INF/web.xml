@@ -22,7 +22,7 @@
 		<auth-method>FORM</auth-method>
 		<form-login-config>
 			<form-login-page>/login/login_ad.jsp</form-login-page>
-			<form-error-page>/login/login_failed.jsp</form-error-page>
+			<form-error-page>/login/login_failed_ad.jsp</form-error-page>
 		</form-login-config>
 	</login-config>
     <servlet>
