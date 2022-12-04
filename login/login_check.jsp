@@ -21,8 +21,8 @@
                 J_UserId = rs.getString("userid");
                 String username = rs.getString("name");
 
-                session.setAttribute("user_id", J_UserId);
-                session.setAttribute("user_name", username);
+                session.setAttribute("id", J_UserId);
+                session.setAttribute("name", username);
 
                 response.sendRedirect("../index.jsp"); // 페이지이동
 

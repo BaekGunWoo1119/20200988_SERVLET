@@ -16,7 +16,7 @@
 <title>고객센터 게시판</title>
 </head>
 <body>
-<jsp:include page="../top_menu.jsp" />
+<jsp:include page="top_menu_board.jsp" />
    <div class="jumbotron">
       <div class="container">
 	<h1 class="display-3">게시판(고객센터)</h1>

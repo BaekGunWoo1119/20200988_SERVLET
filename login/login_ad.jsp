@@ -8,7 +8,7 @@
 <title>개인 쇼핑몰 사이트입니다.</title>
 </head>
 <body>
-	<jsp:include page="../top_menu.jsp" />
+	<jsp:include page="top_menu_log.jsp" />
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3">관리자 전용 페이지 접근 - 로그인이 필요합니다.</h1>

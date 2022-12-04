@@ -15,26 +15,26 @@
     	</div>
     </div>
     <div>
-        <a class="navbar-brand" href="./index.jsp"><img src="image\logo_img.gif" class="img-fluid" alt="main_image"></a>
+        <a class="navbar-brand" href="../index.jsp"><img src="../image\logo_img.gif" class="img-fluid" alt="main_image"></a>
     </div>
     
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.jsp">상품목록(기본 홈)</a>
+			<a class="navbar-brand" href="../index.jsp">상품목록(기본 홈)</a>
             <% 
                 if(session.getAttribute("id") == null){
-                    %><a class="navbar-brand" href="login/login_user.jsp">로그인</a>
-                      <a class="navbar-brand" href="member_join.jsp">회원가입</a><%
+                    %><a class="navbar-brand" href="../login/login_user.jsp">로그인</a>
+                      <a class="navbar-brand" href="../member_join.jsp">회원가입</a><%
                 }
                 
                 else {
                  %><a class="navbar-brand" href=""><%=session.getAttribute("name")%>님</a>
-                   <a class="navbar-brand" href="login/logout.jsp">로그아웃</a><%
+                   <a class="navbar-brand" href="../login/logout.jsp">로그아웃</a><%
             
                 }
             %>
-            <a class="navbar-brand" href="/BoardListAction.do?pageNum=1">게시판(고객센터)</a>
-            <a class="navbar-brand" href="admin/index_ad.jsp">관리자모드</a>
+            <a class="navbar-brand" href=".././BoardListAction.do?pageNum=1">게시판(고객센터)</a>
+            <a class="navbar-brand" href="../admin/index_ad.jsp">관리자모드</a>
 		</div>
 	</div>
 </nav>

@@ -16,7 +16,7 @@
 <title>장바구니</title>
 </head>
 <body>
-	<jsp:include page="../top_menu.jsp" /> 
+	<jsp:include page="top_menu_cart.jsp" /> 
 	<div class="jumbotron">
 	<div class="container">
 		<h1 class="display-3">장바구니</h1>

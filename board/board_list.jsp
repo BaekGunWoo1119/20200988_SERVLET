@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="mvc.model.Board_dto"%>
 <%
-   String sessionId = (String) session.getAttribute("JSESSIONID");
+   String J_UserId = session.getId(); 
    List boardList = (List) request.getAttribute("boardlist");
    int total_record = ((Integer) request.getAttribute("total_record")).intValue();
    int pageNum = ((Integer) request.getAttribute("pageNum")).intValue();
@@ -18,17 +18,18 @@
 <title>고객센터 게시판</title>
 <script type="text/javascript">
    function checkForm() {	
-      if (${sessionId==null}) {
+      var Session_Id = "<%=J_UserId%>";
+      if (Session_Id==null) {
 	alert("로그인 해주세요.");
 	location.href = "../login/login_user.jsp"
 	return false;
    	}
-	location.href = "./BoardWriteForm.do?id=<%=sessionId%>"
+	location.href = "./BoardWriteForm.do?id=<%=J_UserId%>"
      }
 </script>
 </head>
 <body>
-<jsp:include page="../top_menu.jsp" />
+<jsp:include page="top_menu_board.jsp" />
 <div class="jumbotron">
    <div class="container">
 	<h1 class="display-3">게시판(고객센터)</h1>
